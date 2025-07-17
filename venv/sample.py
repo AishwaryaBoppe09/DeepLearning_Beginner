@@ -1,1 +1,1 @@
-print("Hi this is Deep Learning lab!")
+print("Hi  Deep Learning lab!")
