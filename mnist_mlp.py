@@ -22,7 +22,7 @@ model.add(Dense(64,activation='relu'))
 #model.add(Dense(32,activation='relu'))
 model.add(Dense(10,activation='softmax'))
 
-model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
+model.compile(optimizer='adam',loss='categorical_crossentropy')
  
 #train
 model.fit(X_train,y_train,epochs=20,batch_size=64)
