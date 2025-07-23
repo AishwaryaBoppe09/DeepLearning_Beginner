@@ -4,6 +4,7 @@ from keras.layers import Dense, Flatten
 from keras.utils import to_categorical
 from keras.datasets import cifar10
 import matplotlib.pyplot as plt
+from keras.optimizers import Adam
 
 #load data
 (x_train,y_train),(x_test,y_test) = cifar10.load_data()
@@ -38,7 +39,13 @@ print(f"accuracy: {accuracy},loss: {loss}")
 plt.plot(history.history['accuracy'],label="train accuracy",color='blue')
 plt.plot(history.history['val_accuracy'],label="validation accuracy",color='red')
 plt.legend()
-plt.title("Epoch vs Accuarcy on train and validation data")
+plt.title("Epoch vs Accuarcy on train and test data")
+plt.show()
+
+plt.plot(history.history['loss'],label="train loss",color='blue')
+plt.plot(history.history['val_loss'],label="validation loss",color='red')
+plt.legend()
+plt.title("Epoch vs Loss on train and test data")
 plt.show()
 
 
