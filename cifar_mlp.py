@@ -15,17 +15,31 @@ y_test = to_categorical(y_test)
 #build the architecture
 model = Sequential()
 model.add(Flatten(input_shape=(32,32,3)))
+model.add(Dense(units=1024,activation='relu'))
+model.add(Dense(units=512,activation='relu'))
+model.add(Dense(units=256,activation='relu'))
+model.add(Dense(units=128,activation='relu'))
+model.add(Dense(units=64,activation='relu'))
 model.add(Dense(units=10,activation='softmax'))
 
 #compile
 model.compile(optimizer='adam',loss= 'categorical_crossentropy',metrics=['accuracy'])
 
 #train
-model.fit(x_train,y_train,epochs=10,batch_size=64)
+history = model.fit(x_train,y_train,epochs=100,batch_size=64, validation_data = (x_test,y_test))
+print(history.history.items())
+print(history.history.keys())
 
 #evaluate
 loss, accuracy = model.evaluate(x_test,y_test)
 print(f"accuracy: {accuracy},loss: {loss}")
+
+#visualization
+plt.plot(history.history['accuracy'],label="train accuracy",color='blue')
+plt.plot(history.history['val_accuracy'],label="validation accuracy",color='red')
+plt.legend()
+plt.title("Epoch vs Accuarcy on train and validation data")
+plt.show()
 
 
 

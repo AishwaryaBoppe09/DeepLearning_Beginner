@@ -35,3 +35,27 @@ Epoch 10/10
 accuracy: 0.28929999470710754,loss: 79.28453826904297
 
 
+----------------------------------------------------------------------
+
+Experiment 02
+
+history.history['accuracy'] : true
+history.history['val_accuracy'] : true
+epochs vs  Accuracy on train and validation data : true
+
+o/p :  accuracy: 0.24629999697208405,loss: 61.40218734741211
+
+---------------------------------------------------------------------
+
+Experiment 03
+
+no of epochs : 30
+epochs vs  Accuracy on train and test data : true
+o/p : accuracy: 0.19089999794960022,loss: 78.34173583984375
+
+----------------------------------------------------------------------
+Experiment 04
+
+no of epochs : 100
+
+o/p : accuracy: 0.2303999960422516,loss: 61.135948181152344
