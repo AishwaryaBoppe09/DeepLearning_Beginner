@@ -43,11 +43,11 @@ print(f"accuracy: {accuracy},loss: {loss}")
 
 
 #visualization
-plt.plot(history.history['accuracy'],label="train accuracy",color='blue')
-plt.plot(history.history['val_accuracy'],label="validation accuracy",color='red')
-plt.legend()
-plt.title("Epoch vs Accuarcy on train and test data")
-plt.show()
+# plt.plot(history.history['accuracy'],label="train accuracy",color='blue')
+# plt.plot(history.history['val_accuracy'],label="validation accuracy",color='red')
+# plt.legend()
+# plt.title("Epoch vs Accuarcy on train and test data")
+# plt.show()
 
 
 plt.plot(history.history['loss'],label="train loss",color='blue')
